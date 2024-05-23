@@ -1,0 +1,16 @@
+{
+  "name": "vue-js-hillel-homework",
+  "version": "1.0.0",
+  "description": "firstHomeWork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lodash": "latest",
+    "prettier": "latest",
+    "eslint": "latest"
+  },
+  "author": "VasyaTuryak",
+  "license": "MIT"
+}
