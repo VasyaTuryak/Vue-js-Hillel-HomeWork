@@ -1,7 +1,10 @@
 # Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Потрібно створити компонент Card.vue, який:
 
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+Повинен повертати наступну структуру - посилання
+Компонент приймає 2 пропса - title і text.
+Необхідно прийняти їх у компоненті та рендерити в відповідних місцях.
+Якщо якогось пропса не вистачає (не був переданий у компонент), то не рендеримо HTML-код, який його обгортає.
+Підключіть компонент у App і рендерьте його 3 рази (передаючи пропси по черзі).
+Під час першого рендеру передайте лише заголовок (title). Під час другого - лише текст (text). Під час третього - обидва пропси.
