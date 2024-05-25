@@ -4,12 +4,15 @@
   "description": "firstHomeWork",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "git": "git status"
   },
   "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
     "lodash": "latest",
-    "prettier": "latest",
-    "eslint": "latest"
+    "prettier": "latest"
   },
   "author": "VasyaTuryak",
   "license": "MIT"
