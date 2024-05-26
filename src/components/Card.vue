@@ -1,15 +1,21 @@
 <script setup>
-defineProps(
-    ['number','title','text'
-    ]
+import {ref} from "vue";
 
+const test=ref(100);
+defineProps(
+    {
+      title: String,
+      text: String,
+      number: Number
+    }
 )
 </script>
 
 <template>
   <div className="card" style="border: solid; margin-bottom: 5px">
     <div className="card-body">
-      <p>PROPS number {{number}} </p>
+
+      <p>PROPS number {{number}} +{{test}} </p>
       <h4 className="card-title">hi</h4>
       <p className="card-text">how are you?</p>
       <br>
