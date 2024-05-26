@@ -1,6 +1,6 @@
 # Vue 3 + Vite
 
-Потрібно створити компонент Card.vue, який:
+Потрібно створити компонент Card.vue, який: https://github.com/junjun-it-courses/react-hw/blob/master/task-2.html
 
 Повинен повертати наступну структуру - посилання
 Компонент приймає 2 пропса - title і text.
