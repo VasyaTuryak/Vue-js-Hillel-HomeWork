@@ -1,13 +1,16 @@
-<script setup>
+<script>
 import Card from "./components/Card.vue";
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  components: {Card}
+})
 </script>
 
 <template>
-
-  <Card number='1' title="title1 from App.vue" text="text1 from App.vue"  />
-  <Card number='2' title="title2 from App.vue"  />
-  <Card number='3'  text="text3 from App.vue"  />
-
+  <Card number=1 title="title1 from App.vue"  />
+  <Card number=2  text="text2 from App.vue"  />
+  <Card number=3 title="title3 from App.vue" text="text3 from App.vue"  />
 </template>
 
 <style scoped>
