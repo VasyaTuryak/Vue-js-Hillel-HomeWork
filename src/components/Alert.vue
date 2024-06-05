@@ -1,3 +1,13 @@
+<template>
+  <div>
+    <div class="alert"
+         :class="`alert-${type} border border-${type}`"
+         role="alert">what is love?
+      <p>{{text}}</p>
+    </div>
+  </div>
+</template>
+
 <script>
 export default {
   name: "Alert",
@@ -16,16 +26,3 @@ export default {
 }
 </script>
 
-<template>
-<div>
-  <div class="alert"
-       :class="`alert-${type} border border-${type}`"
-       role="alert">what is love?
-  <p>{{text}}</p>
-  </div>
-</div>
-</template>
-
-<style scoped>
-
-</style>
