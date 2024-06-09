@@ -1,24 +1,25 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+
+import {defineComponent} from "vue";
+import Carousel from "./components/Carousel.vue";
+
+export default defineComponent({
+  components: {Carousel},
+  data() {
+    return {
+      linksForPhotos: [
+        "/src/assets/1.png",
+        "/src/assets/2.png",
+        "/src/assets/3.png",
+      ]
+    }
+  }
+})
 </script>
 
 <template>
   <div>
-   HW 14
+    <Carousel :link="linksForPhotos"/>
   </div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
