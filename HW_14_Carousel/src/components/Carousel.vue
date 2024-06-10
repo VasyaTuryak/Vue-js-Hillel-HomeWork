@@ -1,32 +1,3 @@
-<script>
-export default {
-  name: "Carousel",
-  props: {
-    link: {
-      type: Array,
-      required: false,
-      default: ["/src/assets/no_img.png"]
-    }
-  },
-  data() {
-    return {
-      numberImgToShow: 0,
-    }
-  },
-  watch: {
-    numberImgToShow(val) {
-      if (val > this.link.length - 1) {
-        this.numberImgToShow = 0
-      }
-
-      if (val < 0) {
-        this.numberImgToShow = this.link.length - 1
-      }
-    }
-  }
-}
-</script>
-
 <template>
   <div class="container-fluid">
     <p>Counter {{ numberImgToShow + 1 }}</p>
@@ -44,9 +15,9 @@ export default {
           </div>
 
           <div class="col-8">
-            <div class="carousel-inner" v-for="(photo,index) in link" :key="index">
-              <div class="carousel-item" :class=" index===numberImgToShow && 'active' " >
-                <img :src="photo" class="d-block w-100" alt="...">
+            <div class="carousel-inner" >
+              <div class="carousel-item active"  >
+                <img :src="activePhoto" class="d-block w-100" :alt="`There has to be photo: ${activePhoto}`">
               </div>
             </div>
           </div>
@@ -68,6 +39,43 @@ export default {
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Carousel",
+  props: {
+    link: {
+      type: Array,
+      required: false,
+      default: ["/src/assets/no_img.png"]
+    }
+  },
+  data() {
+    return {
+      numberImgToShow: 0,
+    }
+  },
+  computed:{
+    activePhoto(){
+      return this.link[this.numberImgToShow]
+    }
+  },
+  watch: {
+    numberImgToShow(val) {
+      if (val > this.link.length - 1) {
+        this.numberImgToShow = 0
+      }
+
+      if (val < 0) {
+        this.numberImgToShow = this.link.length - 1
+      }
+
+    }
+  }
+}
+</script>
+
+
 
 
 
